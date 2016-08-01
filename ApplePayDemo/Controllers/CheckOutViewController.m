@@ -11,9 +11,9 @@
 //for Apple Pay
 #import "Passkit/Passkit.h"
 //for Apple Pay
-static NSString * const kShippingMethodCarrierPidgeon = @"Carrier Pidgeon";
-static NSString * const kShippingMethodUberRush       = @"Uber Rush";
-static NSString * const kShippingMethodSentientDrone  = @"Sentient Drone";
+static NSString * const kShippingMethodForTomorrow = @"Tomorrow";
+static NSString * const kShippingMethodForToday       = @"Today";
+static NSString * const kShippingMethodForSomeDay  = @"Some Day";
 
 @interface CheckOutViewController () <PKPaymentAuthorizationViewControllerDelegate>
 
@@ -123,9 +123,9 @@ static NSString * const kShippingMethodSentientDrone  = @"Sentient Drone";
      - Amount for shipping cost, this will get add in grand total
      - Details for some messages to show user respective to shipping method*/
     NSArray *shippingMethods = @[
-                                 [self shippingMethodWithIdentifier:kShippingMethodCarrierPidgeon detail:kShippingMethodCarrierPidgeon amount:10.00 details:@"Deliver tomorrow"],
-                                 [self shippingMethodWithIdentifier:kShippingMethodUberRush detail:kShippingMethodUberRush amount:15.f details:@"Delive today"],
-                                 [self shippingMethodWithIdentifier:kShippingMethodSentientDrone detail:kShippingMethodSentientDrone amount:00.f details:@"Some day you will get it"]
+                                 [self shippingMethodWithIdentifier:kShippingMethodForTomorrow detail:kShippingMethodForTomorrow amount:10.00 details:@"Deliver tomorrow"],
+                                 [self shippingMethodWithIdentifier:kShippingMethodForToday detail:kShippingMethodForToday amount:15.f details:@"Delive today"],
+                                 [self shippingMethodWithIdentifier:kShippingMethodForSomeDay detail:kShippingMethodForSomeDay amount:00.f details:@"Some day you will get it"]
                                  ];
     self.shippingMethods = shippingMethods;
   
