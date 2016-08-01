@@ -1,0 +1,51 @@
+[
+ {
+  "id" : 1,
+  "name": "Rock Guitar",
+  "price": "59.99",
+  "image_name": "RockGuitar",
+  "discount": "4.99"
+ },
+ {
+  "id" : 2,
+  "name": "Ladies Bag",
+  "price": "19.49",
+  "image_name": "bag",
+  "discount": "1.99"
+ },
+ {
+  "id" : 3,
+  "name": "Camera",
+  "price": "40.00",
+  "image_name": "Camera",
+  "discount": "2.99"
+ },
+ {
+  "id" : 4,
+  "name": "Red Car",
+  "price": "20.00",
+  "image_name": "Red_car",
+  "discount": "0.99"
+ },
+ {
+  "id" : 5,
+  "name": "Green Car",
+  "price": "20.00",
+  "image_name": "Green_car",
+  "discount": "1.99"
+ },
+ {
+  "id" : 6,
+  "name": "Cymbals",
+  "price": "60.49",
+  "image_name": "Cymbals",
+  "discount": "6.99"
+ },
+ {
+  "id" : 7,
+  "name": "Spects",
+  "price": "10.00",
+  "image_name": "travel_journey",
+  "discount": "0.00"
+ }
+]

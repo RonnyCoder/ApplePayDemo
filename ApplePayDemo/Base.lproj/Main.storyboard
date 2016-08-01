@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hwv-no-5xE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PVT-vc-3ev">
+            <objects>
+                <navigationController id="hwv-no-5xE" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="W10-3k-31Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pfb-Df-iW2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9G-lK-o0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="323"/>
+        </scene>
+        <!--ApplePay Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mck-2n-RYd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2bq-5a-UTC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3tH-u7-hfj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mck-2n-RYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3VG-Kt-OFI"/>
+                            <constraint firstItem="mck-2n-RYd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NUY-5R-PWA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mck-2n-RYd" secondAttribute="bottom" constant="-30" id="XGy-Q2-6Sz"/>
+                            <constraint firstAttribute="trailing" secondItem="mck-2n-RYd" secondAttribute="trailing" id="kZS-6g-csm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ApplePay Demo" id="hx6-lq-pbG"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="itemsTableView" destination="mck-2n-RYd" id="Jtc-AK-loF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="317"/>
+        </scene>
+        <!--Check Out View Controller-->
+        <scene sceneID="Oed-ou-C3L">
+            <objects>
+                <viewController storyboardIdentifier="CheckOutViewController" id="F1B-zx-T2G" customClass="CheckOutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Npe-H1-kwJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pUW-FD-6F6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="STA-Va-FNU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XaN-ND-o1H">
+                                <rect key="frame" x="0.0" y="28" width="600" height="253"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-T5-dAH">
+                                <rect key="frame" x="242" y="322" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KR-mg-EcT">
+                                <rect key="frame" x="230" y="423" width="140" height="35"/>
+                                <state key="normal" backgroundImage="ApplePayBTN_35pt__black_logo_">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyWithApplePay_action:" destination="F1B-zx-T2G" eventType="touchUpInside" id="A6G-SB-yy3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZC-3t-vTt">
+                                <rect key="frame" x="299" y="322" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udD-Dv-qWs">
+                                <rect key="frame" x="213" y="362.5" width="73" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3w-r3-ERq">
+                                <rect key="frame" x="299" y="362" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xZC-3t-vTt" firstAttribute="top" secondItem="XaN-ND-o1H" secondAttribute="bottom" constant="41" id="0jz-6b-JtT"/>
+                            <constraint firstItem="XaN-ND-o1H" firstAttribute="leading" secondItem="STA-Va-FNU" secondAttribute="leading" id="4jZ-PN-fyO"/>
+                            <constraint firstItem="c3w-r3-ERq" firstAttribute="centerX" secondItem="xZC-3t-vTt" secondAttribute="centerX" id="8ag-bc-zdt"/>
+                            <constraint firstItem="xZC-3t-vTt" firstAttribute="centerY" secondItem="STA-Va-FNU" secondAttribute="centerY" constant="31.5" id="MA4-u1-I0V"/>
+                            <constraint firstItem="gbh-T5-dAH" firstAttribute="centerY" secondItem="xZC-3t-vTt" secondAttribute="centerY" id="Mmp-E1-gWL"/>
+                            <constraint firstItem="xZC-3t-vTt" firstAttribute="centerX" secondItem="STA-Va-FNU" secondAttribute="centerX" constant="20" id="T2s-Wk-Fpg"/>
+                            <constraint firstAttribute="trailing" secondItem="XaN-ND-o1H" secondAttribute="trailing" id="T5y-2T-A4b"/>
+                            <constraint firstItem="xZC-3t-vTt" firstAttribute="leading" secondItem="gbh-T5-dAH" secondAttribute="trailing" constant="13" id="YKV-gm-TwA"/>
+                            <constraint firstItem="udD-Dv-qWs" firstAttribute="centerY" secondItem="c3w-r3-ERq" secondAttribute="centerY" id="ahA-zC-6Q6"/>
+                            <constraint firstItem="XaN-ND-o1H" firstAttribute="top" secondItem="Npe-H1-kwJ" secondAttribute="bottom" constant="8" id="bOE-Hw-R9g"/>
+                            <constraint firstItem="8KR-mg-EcT" firstAttribute="top" secondItem="c3w-r3-ERq" secondAttribute="bottom" constant="40.5" id="iRf-MG-emJ"/>
+                            <constraint firstItem="8KR-mg-EcT" firstAttribute="centerX" secondItem="STA-Va-FNU" secondAttribute="centerX" id="jc0-sy-z6M"/>
+                            <constraint firstItem="c3w-r3-ERq" firstAttribute="top" secondItem="xZC-3t-vTt" secondAttribute="bottom" constant="19.5" id="jmm-ne-D4u"/>
+                            <constraint firstItem="c3w-r3-ERq" firstAttribute="leading" secondItem="udD-Dv-qWs" secondAttribute="trailing" constant="13" id="sC9-hQ-OdE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBuy" destination="8KR-mg-EcT" id="lhV-Qs-mMC"/>
+                        <outlet property="itemDiscount" destination="c3w-r3-ERq" id="vRX-06-51A"/>
+                        <outlet property="itemImageView" destination="XaN-ND-o1H" id="Ha8-W8-v1o"/>
+                        <outlet property="itemPriceLabel" destination="xZC-3t-vTt" id="ptj-S2-5ze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N19-4F-o3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ApplePayBTN_35pt__black_logo_" width="140" height="35"/>
+    </resources>
+</document>
